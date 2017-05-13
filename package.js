@@ -1,7 +1,7 @@
 var packageName = 'leaf4monkey:oauth-helpers-common';
 var mainModule = './lib/index.js';
 var mainModuleEnv = mainModuleEnv;
-var version = '0.0.5';
+var version = '0.0.6';
 
 Package.describe({
   name: packageName,
@@ -15,6 +15,14 @@ var commonDependencies = function (api) {
   api.use('ecmascript');
   api.use('meteor', mainModuleEnv);
   api.use('service-configuration', mainModuleEnv);
+  api.use('accounts-base', mainModuleEnv);
+  api.use('accounts-oauth', mainModuleEnv);
+  api.use('oauth', mainModuleEnv);
+
+  api.imply('service-configuration', mainModuleEnv);
+  api.imply('accounts-base', mainModuleEnv);
+  api.imply('accounts-oauth', mainModuleEnv);
+  api.imply('oauth', mainModuleEnv);
 };
 
 Package.onUse(function(api) {
