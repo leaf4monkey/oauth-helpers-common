@@ -1,9 +1,11 @@
 var packageName = 'leaf4monkey:oauth-helpers-common';
 var mainModule = './lib/index.js';
 var mainModuleEnv = mainModuleEnv;
+var version = '0.0.5';
+
 Package.describe({
   name: packageName,
-  version: '0.0.2',
+  version: version,
   summary: 'Help you create oauth packages rapidly.',
   git: 'git@github.com:leaf4monkey/oauth-helpers-common.git',
   documentation: 'README.md'
@@ -26,5 +28,5 @@ Package.onUse(function(api) {
 //  commonDependencies(api);
 //  api.use('tinytest');
 //  api.addFiles(mainModule, mainModuleEnv);
-//  api.mainModule('oauth-helpers-tests.js', mainModuleEnv);
+//  api.mainModule('oauth-helpers-common-tests.js', mainModuleEnv);
 //});
